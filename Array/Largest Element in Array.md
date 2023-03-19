@@ -19,5 +19,5 @@ class Compute {
 }
 ```
 
-> hello
+> ___Time C0mplexity___ O(NlogN)
 
