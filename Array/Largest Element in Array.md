@@ -7,7 +7,8 @@ Given an array A[] of size n. The task is to find the largest element in it.
 
 Sort the Array. And return the last element as the largest element.
 
-class Compute {
+
+`class Compute {
     
     public int largest(int arr[], int n)
     {
