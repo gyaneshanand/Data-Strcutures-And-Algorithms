@@ -30,18 +30,17 @@ Iterate over the array and keep the max variable.
 
 
 ```java
-class Compute {
-    
-    public int largest(int arr[], int n)
+ public int largest(int arr[], int n)
     {
-        Arrays.sort(arr);
-        return arr[n-1];
+        int maxn = arr[0];
+        for(int i=0 ; i<n; i++){
+            if(arr[i]>maxn)
+                maxn = arr[i];
+        }
+        return maxn;
     }
-}
 ```
 
 > __Time Complexity__ O(N)
 > __Space Complexity__ O(1)
 
-
-    qwew
