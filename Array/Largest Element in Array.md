@@ -20,6 +20,7 @@ class Compute {
 ```
 
 > __Time Complexity__ O(NlogN)
+> 
 > __Space Complexity__ O(1)
 
 
