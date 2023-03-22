@@ -1,5 +1,9 @@
 # Second largest Element in Array
 
+Given an array Arr of size N, print second largest distinct element from an array.
+
+https://practice.geeksforgeeks.org/problems/second-largest3735/1
+
 
 ## Solution 1
 
