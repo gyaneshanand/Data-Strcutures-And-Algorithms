@@ -13,10 +13,12 @@ public class OneSubsequenceWithSumK {
             }
             return false;
         }
+        // TAKE
         seq.add(arr[index]);
         Boolean left = findSubsequenceWithSumK(index+1, seq, arr, cur_sum+arr[index], len, K);
         if(left)
             return true;
+        // NOT TAKE
         seq.remove(seq.size()-1);
         return findSubsequenceWithSumK(index+1, seq, arr, cur_sum, len, K);
     }
