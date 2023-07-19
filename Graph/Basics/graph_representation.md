@@ -39,7 +39,17 @@ It is a costly method as n² locations are consumed.
 
 We store the grpah as a List< List<Adjacent Node> >.
 
+**Space complexity** = O(2xE) for Undirected Graph and O(E) for directed Graph.
+
+This representation is much better than the adjacency matrix, as matrix representation consumes n² locations, 
+and most of them are unused.
+
 ![img_1.png](img_1.png)
+
+## Weighted Graph
+
+- For Matrix We can put weights for each edge.
+- For Adjacency List , we can store **List<List<Pair(dest, weight)>>**
 
 ## Points to consider while representing a Graph -
 
