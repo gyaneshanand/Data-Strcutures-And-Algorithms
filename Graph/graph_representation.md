@@ -20,15 +20,19 @@ Graph is a complex data structure and Hence we need to look into how we can stor
 
 ### Input for a Graph
 
-N = No of Nodes
-M = No of Edges
-List of M Edges
+- N = No of Nodes
+- M = No of Edges
+- List of M Edges
 
-Eg of a Undirected Graph Input
+Eg - of a Undirected Graph Input
 
 3 4
+
 1 2
+
 2 3
+
 1 2
+
 1 3
 
