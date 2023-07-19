@@ -35,6 +35,18 @@ An adjacency matrix of a graph is a two-dimensional array of size n x n.
 
 It is a costly method as n² locations are consumed.
 
+### Advantages of Adjacency Matrix:
+
+- Representation is easier to implement and follow.
+- Removing an edge takes O(1) time.
+- Queries like whether there is an edge from vertex ‘u’ to vertex ‘v’ are efficient and can be done O(1).
+
+### Disadvantages of Adjacency Matrix:
+
+- Consumes more space O(V^2). Even if the graph is sparse(contains less number of edges), it consumes the same space.
+- Adding a vertex takes O(V^2) time. 
+- Computing all neighbors of a vertex takes O(V) time (Not efficient).
+
 ## Adjacency List
 
 We store the grpah as a List< List<Adjacent Node> >.
@@ -45,6 +57,18 @@ This representation is much better than the adjacency matrix, as matrix represen
 and most of them are unused.
 
 ![img_1.png](img_1.png)
+
+### Advantages of Adjacency List:
+
+- Saves space. Space taken is O(|V|+|E|). In the worst case, there can be C(V, 2) number of edges in a graph thus consuming O(V^2) space.
+- Adding a vertex is easier.
+- Computing all neighbors of a vertex takes optimal time.
+
+### Disadvantages of Adjacency List:
+
+- Queries like whether there is an edge from vertex u to vertex v are not efficient and can be done O(V).
+
+
 
 ## Weighted Graph
 
