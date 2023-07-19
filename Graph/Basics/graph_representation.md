@@ -56,7 +56,7 @@ We store the grpah as a List< List<Adjacent Node> >.
 This representation is much better than the adjacency matrix, as matrix representation consumes n² locations, 
 and most of them are unused.
 
-![img_1.png](img_1.png)
+![img_1.png](../assets/img_8.png)
 
 ### Advantages of Adjacency List:
 
