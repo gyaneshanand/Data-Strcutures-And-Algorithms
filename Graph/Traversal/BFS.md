@@ -15,7 +15,7 @@
          1. Mark that as visited.
          2. Add that neighbour to Queue
 
-    ```
+    ```java
    public ArrayList<Integer> bfsOfGraph(int V, ArrayList<ArrayList<Integer>> adj) {
         ArrayList<Integer> bfs = new ArrayList<>();
         boolean visited[] = new boolean[V];
