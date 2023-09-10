@@ -1,4 +1,4 @@
-package recursion.parameterizedAndFunctionalRecursion;
+package Recursion.parameterizedAndFunctionalRecursion;
 
 /**
  * In Functional recusrsion , the function itself returns a value

@@ -1,4 +1,4 @@
-package recursion.intro;
+package Recursion.intro;
 
 public class RecursionWithBaseCondition {
 

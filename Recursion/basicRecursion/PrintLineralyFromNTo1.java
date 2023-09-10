@@ -1,4 +1,4 @@
-package recursion.basicRecursion;
+package Recursion.basicRecursion;
 
 // METHOD 1
 

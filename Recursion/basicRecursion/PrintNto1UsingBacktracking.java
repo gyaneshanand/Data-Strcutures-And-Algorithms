@@ -1,4 +1,4 @@
-package recursion.basicRecursion;
+package Recursion.basicRecursion;
 
 public class PrintNto1UsingBacktracking {
 
