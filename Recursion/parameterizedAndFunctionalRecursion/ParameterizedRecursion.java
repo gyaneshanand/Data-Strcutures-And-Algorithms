@@ -1,4 +1,4 @@
-package recursion.parameterizedAndFunctionalRecursion;
+package Recursion.parameterizedAndFunctionalRecursion;
 
 
 /**
