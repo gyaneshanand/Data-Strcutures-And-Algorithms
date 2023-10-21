@@ -11,7 +11,7 @@ Its just a problem to find number of connected components in the graph.
 ## Complexity
 
 ### Time complexity:
-O(N^2)
+O(N) + O(V + 2E)
 - First we need to visit each node
 - For each Node we need to visit all the neighbour nodes which can be (n-1) in worst case.
 

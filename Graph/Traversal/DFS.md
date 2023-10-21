@@ -11,17 +11,17 @@ then it backtracks on the same path and traverses other unvisited nodes.
 public ArrayList<Integer> dfsOfGraph(int V, ArrayList<ArrayList<Integer>> adj) {
     boolean visited[] = new boolean[V];
     ArrayList<Integer> dfsPath = new ArrayList<Integer>();
-    dfsPath.add(0);
-    visited[0] = true;
+
     dfs(0, visited, adj, dfsPath);
+
     return dfsPath;
 }
 
 private static void dfs(int node, boolean visited[], ArrayList<ArrayList<Integer>> adj, ArrayList<Integer> dfsPath){
+        visited[node] = true;
+        dfsPath.add(node);
         for(int v: adj.get(node)){
             if(!visited[v]){
-                visited[v] = true;
-                dfsPath.add(v);
                 dfs(v, visited, adj, dfsPath);
             }
         }
