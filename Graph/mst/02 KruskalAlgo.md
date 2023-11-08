@@ -2,19 +2,23 @@
 class Solution{
 	static int spanningTree(int V, int E, int edges[][]){
 	    
+        // Create Edges which can sorted
 	    List<Edge> graphEdges = new ArrayList<>();
 	    for(int e=0; e<E; e++){
 	        graphEdges.add(new Edge(edges[e][0], edges[e][1], edges[e][2]));
 	    }
 	    
+        // Sort the edges
 	    Collections.sort(graphEdges, (x, y) -> x.weight - y.weight);
 	    
+        // Create a Disjoint Set
 	    DisjointSet ds = new DisjointSet(V);
 	    
 	    int minMstWeight = 0;
-	    
+        
 	    for(Edge edge : graphEdges){
-	        
+	        // If two nodes in the graph do not belong to same component , add that to mst
+            // This works because edges are already sorted according to their weight
 	        if(ds.findParent(edge.src) != ds.findParent(edge.dest)){
 	            ds.unionBySize(edge.src, edge.dest);
 	            minMstWeight+=edge.weight;
