@@ -59,3 +59,69 @@ public class adjacency_list_representation {
     }
 
 }
+
+// ===============================
+
+// Another Better and Modular Code
+
+import java.util.*;
+import java.util.stream.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Graph g = new Graph(6, false);   // 6 vertices, undirected
+        
+        g.addEdge(1, 2);
+        g.addEdge(1, 3);
+        g.addEdge(2, 4);
+        g.addEdge(3, 4);
+        g.addEdge(3, 5);
+        g.addEdge(4, 5);
+        
+        g.printFrom(1);  // prints adjacency from vertex 1 onward
+    }
+}
+
+class Graph {
+    private final List<List<Integer>> adj;
+    private final boolean isDirected;
+
+    public Graph(int numVertices, boolean isDirected) {
+        this.isDirected = isDirected;
+        adj = new ArrayList<>(numVertices);
+        for (int i = 0; i < numVertices; i++) {
+            adj.add(new ArrayList<>());
+        }
+    }
+
+    public void addEdge(int u, int v) {
+        checkVertex(u); 
+        checkVertex(v);
+        adj.get(u).add(v);
+        if (!isDirected) {
+            adj.get(v).add(u);
+        }
+    }
+
+    public List<Integer> neighbors(int u) {
+        checkVertex(u);
+        return Collections.unmodifiableList(adj.get(u));
+    }
+
+    public void printFrom(int start) {
+        IntStream.range(start, adj.size())
+                 .forEach(u -> {
+                     String joined = adj.get(u).stream()
+                        .map(String::valueOf)
+                        .collect(Collectors.joining(", "));
+                     System.out.printf("%d -> %s%n", u, joined);
+                 });
+    }
+
+    private void checkVertex(int u) {
+        if (u < 0 || u >= adj.size()) {
+            throw new IndexOutOfBoundsException("Vertex " + u + " is out of range");
+        }
+    }
+}
+
