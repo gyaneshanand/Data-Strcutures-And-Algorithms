@@ -109,3 +109,70 @@ public class matrix_representation {
         }
      }
 }
+
+// Better and Modular Code 
+
+class Main {
+    public static void main(String[] args) {
+        Graph graph = new Graph(6, false);
+        
+        graph.addEdge(1, 2);
+        graph.addEdge(1, 3);
+        graph.addEdge(2, 5);
+        graph.addEdge(2, 4);
+        graph.addEdge(3, 4);
+        graph.addEdge(4, 5);
+        
+        graph.displayGraph(1);
+    }
+}
+
+class Graph{
+    private int[][] graph;
+    private boolean isDirected;
+    
+    public Graph(int numVertices, boolean isDirected){
+        graph = new int[numVertices][numVertices];
+        this.isDirected = isDirected;
+    }
+    
+    public boolean addEdge(int src, int dest){
+        if(!validateVertex(src) || !validateVertex(dest)){
+            return false;
+        }
+        graph[src][dest] = 1;
+        if(!isDirected){
+            graph[dest][src] = 1;
+        }
+        return true;
+    }
+    
+    public void displayGraph(int indexStart){
+        for(int i=0; i<graph.length; i++){
+            if(i<indexStart){
+                continue;
+            }
+            System.out.print(i + " -> ");
+            boolean isFirstNeigbour = true;
+            for(int j=0; j<graph.length; j++){
+                if(graph[i][j]==1){
+                    if(isFirstNeigbour){
+                        isFirstNeigbour = false;
+                        System.out.print(j);
+                    }
+                    else{
+                        System.out.print( ", "+j);
+                    }
+                }
+            }
+            System.out.println();
+        }
+    }
+    
+    private boolean validateVertex(int v){
+        if(v<0 || v>=graph.length){
+            return false;
+        }
+        return true;
+    }
+}
